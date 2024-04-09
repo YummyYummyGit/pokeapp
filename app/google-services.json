@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "507750895177",
+    "project_id": "pokeapi-be10f",
+    "storage_bucket": "pokeapi-be10f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:507750895177:android:7ac9e06084192885dbb998",
+        "android_client_info": {
+          "package_name": "com.example.pokeapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtWQvKp4I_jF7Oq4EG7m4ltTfkAgE_tC8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
