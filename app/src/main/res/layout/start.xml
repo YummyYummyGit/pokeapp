@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <!-- Background -->
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
@@ -22,6 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Title : Poké -->
+
     <TextView
         android:id="@+id/title_poké"
 
@@ -42,6 +44,7 @@
         app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <!-- Title : App -->
+
     <TextView
         android:id="@+id/title_app"
 
@@ -62,13 +65,11 @@
 
     <!-- Button : Login -->
 
-    <!-- Button : Register -->
-
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/start_btn_login"
 
         android:layout_width="134dp"
-        android:layout_height="52dp"
+        android:layout_height="42dp"
         android:layout_marginTop="116dp"
 
         android:backgroundTint="@color/white"
@@ -82,22 +83,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_app" />
 
+    <!-- Button : Register -->
+
     <Button
-        android:id="@+id/btn_register"
+        android:id="@+id/start_btn_register"
 
         android:layout_width="134dp"
-        android:layout_height="52dp"
+        android:layout_height="42dp"
         android:layout_margin="3dp"
 
         android:text="Register"
         android:fontFamily="@font/lexend_extrabold"
-        android:textSize="19dp"
+        android:textSize="16dp"
 
-        style="@style/OutlinedButton"
+        android:background="@drawable/outlined_button_style"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+        app:layout_constraintTop_toBottomOf="@+id/start_btn_login" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
