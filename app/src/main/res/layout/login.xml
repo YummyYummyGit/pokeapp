@@ -10,13 +10,13 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="665dp"
-        android:layout_height="828dp"
-        android:layout_marginTop="4dp"
-        android:alpha="0.4"
-        android:src="@drawable/bg_mewtwo"
+        android:layout_width="525dp"
+        android:layout_height="737dp"
+        android:layout_marginTop="60dp"
+        android:alpha="0.6"
+        android:src="@drawable/bg_pikachu"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-136dp" />
+        tools:layout_editor_absoluteX="2dp" />
 
     <TextView
         android:id="@+id/title_poké"
@@ -29,7 +29,7 @@
         android:fontFamily="@font/lexend_thin"
         android:text="@string/title_name1"
         android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="140sp"
 
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,7 +50,7 @@
         android:fontFamily="@font/lexend_semibold"
         android:text="@string/title_name2"
         android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="150sp"
 
         app:layout_constraintEnd_toEndOf="parent"
@@ -112,52 +112,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textfield_user" />
 
-    <!-- TextField : Email -->
-
-    <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="12dp"
-        android:ems="10"
-
-        android:background="@drawable/edittext_style"
-        android:drawableStart="@drawable/ic_user"
-        android:drawablePadding="12dp"
-
-        android:fontFamily="@font/lexend_light"
-        android:hint="Email"
-        android:inputType="text"
-        android:paddingStart="12dp"
-
-        android:paddingEnd="12dp"
-
-        android:textColor="@color/lightgrey"
-        android:textSize="20dp"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
-
     <!-- TextField : Register -->
 
     <Button
         android:id="@+id/register_btn_register"
-        android:background="@drawable/outlined_button_style"
         android:layout_width="134dp"
         android:layout_height="44dp"
 
-        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
+
         android:fontFamily="@font/lexend_extrabold"
-        android:text="Register"
+        android:textColor="@color/grey"
+
+        android:text="Login"
 
         android:textSize="16sp"
 
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextText"
+        app:layout_constraintVertical_bias="0.393" />
 
     <!-- TextField : Back -->
 
