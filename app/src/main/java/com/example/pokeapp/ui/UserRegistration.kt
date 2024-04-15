@@ -21,6 +21,9 @@ class UserRegistration(private val auth: FirebaseAuth) {
             // Create a document for the user in the "users" collection
             db.collection("users").document(user.uid).set(user).await()
 
+            // Store the username to email mapping
+            db.collection("usernameToEmail").document(username).set(mapOf("email" to email)).await()
+
             return user
         } catch (e: Exception) {
             throw UserRegistrationException(e.message ?: "An error occurred")
