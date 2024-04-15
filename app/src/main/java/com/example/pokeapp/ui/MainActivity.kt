@@ -1,4 +1,4 @@
-package com.example.pokeapp
+package com.example.pokeapp.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.core.content.ContextCompat
+import com.example.pokeapp.R
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 

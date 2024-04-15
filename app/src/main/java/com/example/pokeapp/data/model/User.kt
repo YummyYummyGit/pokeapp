@@ -1,4 +1,4 @@
-package com.example.pokeapp
+package com.example.pokeapp.data.model
 
 data class User(
     val uid: String,

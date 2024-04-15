@@ -1,5 +1,6 @@
-package com.example.pokeapp
+package com.example.pokeapp.ui
 
+import com.example.pokeapp.data.model.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.tasks.await
