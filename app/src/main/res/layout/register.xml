@@ -88,7 +88,7 @@
     <!-- TextField : Password -->
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/textfield_password"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginTop="12dp"
@@ -114,33 +114,33 @@
 
     <!-- TextField : Email -->
 
+    <!-- TextField : Register -->
+
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/textfield_email"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginTop="12dp"
-        android:ems="10"
 
         android:background="@drawable/edittext_style"
         android:drawableStart="@drawable/ic_user"
         android:drawablePadding="12dp"
 
+        android:ems="10"
         android:fontFamily="@font/lexend_light"
         android:hint="Email"
         android:inputType="text"
+
         android:paddingStart="12dp"
 
         android:paddingEnd="12dp"
-
         android:textColor="@color/lightgrey"
+
         android:textSize="20dp"
-
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
-
-    <!-- TextField : Register -->
+        app:layout_constraintTop_toBottomOf="@+id/textfield_password" />
 
     <Button
         android:id="@+id/register_btn_register"
@@ -148,7 +148,6 @@
         android:layout_width="134dp"
         android:layout_height="40dp"
 
-        android:layout_marginTop="20dp"
         android:fontFamily="@font/lexend_extrabold"
         android:text="Register"
 
@@ -157,7 +156,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+        app:layout_constraintTop_toBottomOf="@+id/textfield_email" />
 
     <!-- TextField : Back -->
 

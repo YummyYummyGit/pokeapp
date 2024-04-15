@@ -1,25 +1,29 @@
 package com.example.pokeapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.core.content.ContextCompat
-/* import com.google.firebase.Firebase
+import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.auth
-
-private lateinit var auth: FirebaseAuth */
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // Initialize FirebaseApp before calling any Firebase methods
+        FirebaseApp.initializeApp(this)
+
         window.statusBarColor = ContextCompat.getColor(this, R.color.red)
-// <<<<<<< HEAD
-        setContentView(R.layout.register)
-// =======
         setContentView(R.layout.start)
-        // auth = Firebase.auth
+
+        // Now you can get an instance of FirebaseAuth
+        auth = FirebaseAuth.getInstance()
+
         val crashButton = Button(this)
         crashButton.text="Test Crash"
         crashButton.setOnClickListener{
@@ -30,6 +34,12 @@ class MainActivity : AppCompatActivity() {
             ViewGroup.LayoutParams.MATCH_PARENT,
             ViewGroup.LayoutParams.WRAP_CONTENT
         ))
-// >>>>>>> f2cdc245a01f4fdf5d4f4e1de03931b40f7ab695
+
+        val registerButton = findViewById<Button>(R.id.start_btn_register)
+
+        registerButton.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

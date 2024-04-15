@@ -15,16 +15,16 @@ class RegisterActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register)
+        setContentView(R.layout.register)
 
         auth = FirebaseAuth.getInstance()
         userRegistration = UserRegistration(auth)
 
         //replace(R.id.email,password,username) with the ids from register.xml
-        val emailEditText = findViewById<EditText>(R.id.email)//replace with the ids from register.xml
-        val passwordEditText = findViewById<EditText>(R.id.password)
-        val usernameEditText = findViewById<EditText>(R.id.username)
-        val registerButton = findViewById<Button>(R.id.btn_register)
+        val emailEditText = findViewById<EditText>(R.id.textfield_email)//replace with the ids from register.xml
+        val passwordEditText = findViewById<EditText>(R.id.textfield_password)
+        val usernameEditText = findViewById<EditText>(R.id.textfield_user)
+        val registerButton = findViewById<Button>(R.id.register_btn_register)
 
         registerButton.setOnClickListener {
             val email = emailEditText.text.toString()
