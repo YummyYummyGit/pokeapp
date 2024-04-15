@@ -1,9 +1,12 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.gms.google-services") // Google Services plugin
+    id("com.google.firebase.crashlytics")
     id ("kotlin-android")
     id ("kotlin-kapt")
 }
+apply(plugin = "com.android.application")
 
 android {
     namespace = "com.example.pokeapp"
@@ -62,3 +65,7 @@ dependencies {
     //Firebase Crashlytics SDK
     implementation("com.google.firebase:firebase-crashlytics:18.6.3")
 }
+apply(plugin = "com.google.gms.google-services")
+
+
+
