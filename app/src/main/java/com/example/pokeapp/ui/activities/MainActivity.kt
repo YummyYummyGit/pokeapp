@@ -1,4 +1,4 @@
-package com.example.pokeapp.ui
+package com.example.pokeapp.ui.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

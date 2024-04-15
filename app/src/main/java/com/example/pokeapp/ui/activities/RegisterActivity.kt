@@ -1,10 +1,12 @@
-package com.example.pokeapp.ui
+package com.example.pokeapp.ui.activities
 
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.example.pokeapp.R
+import com.example.pokeapp.ui.UserRegistration
+import com.example.pokeapp.ui.UserRegistrationException
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

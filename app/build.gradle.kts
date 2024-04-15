@@ -64,7 +64,13 @@ dependencies {
 
     //Firebase Crashlytics SDK
     implementation("com.google.firebase:firebase-crashlytics:18.6.3")
+
+    //  Import Retrofit v2 to make API calls easier
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    //  Import ConverterGson to understand JSON files
+    implementation("com.squareup.retrofit2:converter-gson:2.4.0")
 }
+
 apply(plugin = "com.google.gms.google-services")
 
 
