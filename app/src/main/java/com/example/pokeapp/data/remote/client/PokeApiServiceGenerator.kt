@@ -18,6 +18,7 @@ class PokeApiServiceGenerator {
     private val service: PokeApiCalls = retrofit.create(PokeApiCalls::class.java)
 
     val pokemonInfo = MutableLiveData<Pokemon>()
+    val pokemonSpriteUrl = MutableLiveData<String>()
 
     fun getPokemonById(id: Int){
         val call = service.getPokemonById(id)
@@ -26,6 +27,7 @@ class PokeApiServiceGenerator {
             override fun onResponse(call: Call<Pokemon>, response: Response<Pokemon>) {
                 response.body()?.let { pokemon ->
                     pokemonInfo.postValue(pokemon)
+                    pokemonSpriteUrl.postValue(pokemon.sprites.frontDefault)
                 }
             }
 

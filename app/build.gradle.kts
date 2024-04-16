@@ -76,6 +76,10 @@ dependencies {
     implementation ("com.squareup.okhttp3:logging-interceptor:4.3.0")
     // These are HTTP clients
     implementation ("com.squareup.okhttp3:okhttp-urlconnection:4.3.0")
+
+    // Glide
+    implementation("com.github.bumptech.glide:glide:4.12.0")
+    kapt("com.github.bumptech.glide:compiler:4.12.0")
 }
 
 apply(plugin = "com.google.gms.google-services")
