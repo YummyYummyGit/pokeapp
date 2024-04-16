@@ -43,9 +43,9 @@ class LoginActivity : AppCompatActivity() {
                                     val user = auth.currentUser
                                     Toast.makeText(baseContext, "Authentication Success.",
                                         Toast.LENGTH_SHORT).show()
-                                    // Navigate to the next activity
-                                    // val intent = Intent(this, NextActivity::class.java)
-                                    // startActivity(intent)
+                                    // Navigate to the ContentActivity
+                                    val intent = Intent(this, ContentActivity::class.java)
+                                    startActivity(intent)
                                 } else {
                                     // If sign in fails, display a message to the user.
                                     Toast.makeText(baseContext, "Authentication failed.",

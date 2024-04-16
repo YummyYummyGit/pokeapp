@@ -1,5 +1,6 @@
 package com.example.pokeapp.ui.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -23,8 +24,7 @@ class RegisterActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         userRegistration = UserRegistration(auth)
 
-        //replace(R.id.email,password,username) with the ids from register.xml
-        val emailEditText = findViewById<EditText>(R.id.textfield_email)//replace with the ids from register.xml
+        val emailEditText = findViewById<EditText>(R.id.textfield_email)
         val passwordEditText = findViewById<EditText>(R.id.textfield_password)
         val usernameEditText = findViewById<EditText>(R.id.textfield_user)
         val registerButton = findViewById<Button>(R.id.register_btn_register)
@@ -38,6 +38,9 @@ class RegisterActivity : AppCompatActivity() {
                 try {
                     val user = userRegistration.registerUser(email, password, username)
                     // Handle successful registration
+                    // Navigate to LoginActivity
+                    val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
+                    startActivity(intent)
                 } catch (e: UserRegistrationException) {
                     // Handle registration error
                 }
