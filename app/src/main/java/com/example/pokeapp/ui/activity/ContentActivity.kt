@@ -1,11 +1,11 @@
-package com.example.pokeapp.ui.activities
+package com.example.pokeapp.ui.activity
 
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.pokeapp.R
-import com.example.pokeapp.ui.fragments.PokedexFragment
-import com.example.pokeapp.ui.fragments.UserFragment
+import com.example.pokeapp.ui.fragment.PokedexFragment
+import com.example.pokeapp.ui.fragment.UserFragment
 
 class ContentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

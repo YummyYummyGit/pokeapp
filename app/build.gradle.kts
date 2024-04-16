@@ -69,6 +69,13 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     //  Import ConverterGson to understand JSON files
     implementation("com.squareup.retrofit2:converter-gson:2.4.0")
+
+    implementation ("com.squareup.retrofit2:adapter-rxjava:2.7.1")
+    // HttpRequest and converters
+    // This is used for logging (Log) the responses of the WebServices
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.3.0")
+    // These are HTTP clients
+    implementation ("com.squareup.okhttp3:okhttp-urlconnection:4.3.0")
 }
 
 apply(plugin = "com.google.gms.google-services")

@@ -1,4 +1,4 @@
-package com.example.pokeapp.ui
+package com.example.pokeapp.util
 
 import com.example.pokeapp.data.model.User
 import com.google.firebase.auth.FirebaseAuth
