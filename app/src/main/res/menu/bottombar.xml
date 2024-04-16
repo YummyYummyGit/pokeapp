@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/optionUser"
+        android:title="User"/>
+    <item
+        android:id="@+id/optionPokedex"
+        android:title="Pokédex"/>
+    <item
+        android:id="@+id/optionCalculator"
+        android:title="Calculator"/>
+</menu>

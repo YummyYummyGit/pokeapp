@@ -1,46 +1,54 @@
 package com.example.pokeapp.ui.activity
 
 import android.os.Bundle
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.pokeapp.R
+import com.example.pokeapp.ui.fragment.CalculatorFragment
 import com.example.pokeapp.ui.fragment.PokedexFragment
 import com.example.pokeapp.ui.fragment.UserFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class ContentActivity : AppCompatActivity() {
+
+    private lateinit var bottomNavigationView: BottomNavigationView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.content)
 
-        //  variables contain data of "ui > fragments > PokedexFragment / UserFragment"
+        //  variables that contain data from fragments in project
         val pokedexFragment = PokedexFragment()
         val userFragment = UserFragment()
+        val calculatorFragment = CalculatorFragment()
 
-        //  variables carry the id of buttons located in "content.xml"
-        val pokedexButton = findViewById<Button>(R.id.buttonPokedex)
-        val userButton = findViewById<Button>(R.id.buttonUser)
+        bottomNavigationView = findViewById(R.id.bottomBar)
 
-        supportFragmentManager.beginTransaction().apply {
-            replace(R.id.framelayoutDisplay, pokedexFragment)
-            commit()
-        }
+        bottomNavigationView.setOnItemSelectedListener { menuItem ->
+            when(menuItem.itemId) {
+                R.id.optionUser -> {
+                    replaceFragment(UserFragment())
+                    true
+                }
 
-        //  set an action to button "buttonPokedex" in "content.xml"
-        pokedexButton.setOnClickListener {
-            supportFragmentManager.beginTransaction().apply {
-                // in "framelayoutDisplay" located in "content.xml", we tell the framelayout that it has to display the content in "pokedex_fragment.xml"
-                replace(R.id.framelayoutDisplay, pokedexFragment)
-                addToBackStack(null)
-                commit()
+                R.id.optionPokedex -> {
+                    replaceFragment(PokedexFragment())
+                    true
+                }
+
+                R.id.optionCalculator -> {
+                    replaceFragment(CalculatorFragment())
+                    true
+                }
+
+                else -> false
             }
         }
 
-        userButton.setOnClickListener {
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.framelayoutDisplay, userFragment)
-                addToBackStack(null)
-                commit()
-            }
-        }
+        replaceFragment(PokedexFragment())
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction().replace(R.id.framelayoutDisplay, fragment).commit()
     }
 }
