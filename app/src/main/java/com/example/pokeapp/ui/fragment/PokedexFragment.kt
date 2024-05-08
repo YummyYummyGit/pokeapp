@@ -22,6 +22,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [PokedexFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
+
 class PokedexFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -37,7 +38,7 @@ class PokedexFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_pokedex, container, false)
 
         pokeApiServiceGenerator = PokeApiServiceGenerator()
-        pokeApiServiceGenerator.getPokemonById(1)
+        pokeApiServiceGenerator.getPokemonById(2)
 
         pokeApiServiceGenerator.pokemonSpriteUrl.observe(viewLifecycleOwner) { url ->
             val imageView = view.findViewById<ImageView>(R.id.pokemonImage)

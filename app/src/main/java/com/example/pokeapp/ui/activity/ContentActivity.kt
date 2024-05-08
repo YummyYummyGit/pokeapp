@@ -46,6 +46,7 @@ class ContentActivity : AppCompatActivity() {
         }
 
         replaceFragment(PokedexFragment())
+        bottomNavigationView!!.selectedItemId = R.id.optionPokedex
     }
 
     private fun replaceFragment(fragment: Fragment) {
