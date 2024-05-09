@@ -5,10 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.bumptech.glide.Glide
 import com.example.pokeapp.R
 import com.example.pokeapp.data.remote.client.PokeApiServiceGenerator
 
@@ -40,15 +37,15 @@ class PokedexFragment : Fragment() {
         pokeApiServiceGenerator = PokeApiServiceGenerator()
         pokeApiServiceGenerator.getPokemonById(2)
 
-        pokeApiServiceGenerator.pokemonSpriteUrl.observe(viewLifecycleOwner) { url ->
-            val imageView = view.findViewById<ImageView>(R.id.pokemonImage)
-            Glide.with(this).load(url).into(imageView)
-        }
-
-        pokeApiServiceGenerator.pokemonInfo.observe(viewLifecycleOwner) { pokemon ->
-            val nameTextView = view.findViewById<TextView>(R.id.pokemonName)
-            nameTextView.text = pokemon.name
-        }
+//        pokeApiServiceGenerator.pokemonSpriteUrl.observe(viewLifecycleOwner) { url ->
+//            val imageView = view.findViewById<ImageView>(R.id.pokemonImage)
+//            Glide.with(this).load(url).into(imageView)
+//        }
+//
+//        pokeApiServiceGenerator.pokemonInfo.observe(viewLifecycleOwner) { pokemon ->
+//            val nameTextView = view.findViewById<TextView>(R.id.pokemonName)
+//            nameTextView.text = pokemon.name
+//        }
 
         return view
     }

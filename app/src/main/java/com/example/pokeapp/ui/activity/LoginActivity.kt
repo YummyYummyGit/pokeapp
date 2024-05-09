@@ -19,6 +19,9 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
+        val intent = Intent(this, ContentActivity::class.java)
+        startActivity(intent)
+
         auth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
 

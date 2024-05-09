@@ -17,6 +17,14 @@ class ContentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.content)
 
+
+
+        //  RECYCLERVIEW CONTENT
+
+
+
+        //  NAVIGATION OPTIONS
+
         //  variables that contain data from fragments in project
         val pokedexFragment = PokedexFragment()
         val userFragment = UserFragment()
