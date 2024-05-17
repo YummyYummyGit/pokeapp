@@ -1,6 +1,7 @@
 package com.example.pokeapp.data.remote.client
 
 import androidx.lifecycle.MutableLiveData
+import com.example.pokeapp.data.model.PokeList
 import com.example.pokeapp.data.model.Pokemon
 import com.example.pokeapp.data.remote.api.PokeApiCalls
 import retrofit2.Call
@@ -15,10 +16,28 @@ class PokeApiServiceGenerator {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    private val service: PokeApiCalls = retrofit.create(PokeApiCalls::class.java)
+    val service: PokeApiCalls = retrofit.create(PokeApiCalls::class.java)
 
     val pokemonInfo = MutableLiveData<Pokemon>()
     val pokemonSpriteUrl = MutableLiveData<String>()
+
+    fun getPokemonList() {
+        val call = service.getPokemonList()
+
+        call.enqueue(object : Callback<PokeList> {
+            override fun onResponse(call: Call<PokeList>, response: Response<PokeList>) {
+                response.body()?.let { pokelist ->
+                   // pokemonInfo.postValue(pokelist)
+                    // pokemonSpriteUrl.postValue(pokemon.sprites.frontDefault)
+
+                }
+            }
+
+            override fun onFailure(call: Call<PokeList>, t: Throwable) {
+                TODO("Not yet implemented")
+            }
+        })
+    }
 
     fun getPokemonById(id: Int){
         val call = service.getPokemonById(id)
@@ -27,7 +46,7 @@ class PokeApiServiceGenerator {
             override fun onResponse(call: Call<Pokemon>, response: Response<Pokemon>) {
                 response.body()?.let { pokemon ->
                     pokemonInfo.postValue(pokemon)
-                    pokemonSpriteUrl.postValue(pokemon.sprites.frontDefault)
+                    // pokemonSpriteUrl.postValue(pokemon.sprites.frontDefault)
                 }
             }
 
