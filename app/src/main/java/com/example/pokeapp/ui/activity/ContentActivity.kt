@@ -5,8 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.pokeapp.R
 import com.example.pokeapp.ui.fragment.CalculatorFragment
-import com.example.pokeapp.ui.fragment.PokedexFragment
 import com.example.pokeapp.ui.fragment.UserFragment
+import com.example.pokeapp.ui.pokedex.PokedexFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class ContentActivity : AppCompatActivity() {
@@ -17,13 +17,13 @@ class ContentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.content)
 
-
-
         //  RECYCLERVIEW CONTENT
 
 
 
         //  NAVIGATION OPTIONS
+
+
 
         //  variables that contain data from fragments in project
         val pokedexFragment = PokedexFragment()
@@ -56,6 +56,7 @@ class ContentActivity : AppCompatActivity() {
         replaceFragment(PokedexFragment())
         bottomNavigationView!!.selectedItemId = R.id.optionPokedex
     }
+
 
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction().replace(R.id.framelayoutDisplay, fragment).commit()

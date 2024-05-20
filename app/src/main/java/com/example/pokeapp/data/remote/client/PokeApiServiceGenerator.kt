@@ -27,14 +27,12 @@ class PokeApiServiceGenerator {
         call.enqueue(object : Callback<PokeList> {
             override fun onResponse(call: Call<PokeList>, response: Response<PokeList>) {
                 response.body()?.let { pokelist ->
-                   // pokemonInfo.postValue(pokelist)
-                    // pokemonSpriteUrl.postValue(pokemon.sprites.frontDefault)
 
                 }
             }
 
             override fun onFailure(call: Call<PokeList>, t: Throwable) {
-                TODO("Not yet implemented")
+
             }
         })
     }

@@ -7,10 +7,12 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface PokeApiCalls {
-    @GET("pokemon/{id}")
-    fun getPokemonById(@Path("id") id:Int) : Call<Pokemon>
 
+    // https://pokeapi.co/api/v2/pokemon/ - calls all pokemon
     @GET("pokemon")
     fun getPokemonList() : Call<PokeList>
-}
 
+    // https://pokeapi.co/api/v2/pokemon/1 - calls specific pokemon
+    @GET("pokemon/{id}")
+    fun getPokemonById(@Path("id") id:Int) : Call<Pokemon>
+}
