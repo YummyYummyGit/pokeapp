@@ -8,7 +8,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pokeapp.R
 import com.example.pokeapp.data.model.Pokemon
-import com.bumptech.glide.Glide
 
 class PokemonAdapter(private val pokemonList: List<Pokemon>) : RecyclerView.Adapter<PokemonAdapter.PokemonViewHolder>() {
 
@@ -26,13 +25,10 @@ class PokemonAdapter(private val pokemonList: List<Pokemon>) : RecyclerView.Adap
     override fun onBindViewHolder(holder: PokemonViewHolder, position: Int) {
         val pokemon = pokemonList[position]
         holder.pokemonName.text = pokemon.name
-        holder.pokemonId.text = "#${position + 1}"
-
-        Glide.with(holder.itemView.context)
-            .load(pokemon.imageUrl)
-            .placeholder(R.drawable.bg_pikachu)
-            .error(R.drawable.bg_pikachu)
-            .into(holder.pokemonImage)
+        holder.pokemonId.text = "#${position + 1}" // or you can extract id from the url if it's present there
+        // Set the pokemon image if you have the url and using a library like Picasso or Glide
+        // For example:
+        // Glide.with(holder.pokemonImage.context).load(pokemon.imageUrl).into(holder.pokemonImage)
     }
 
     override fun getItemCount() = pokemonList.size

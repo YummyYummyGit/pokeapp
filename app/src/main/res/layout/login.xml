@@ -64,9 +64,9 @@
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/edittext_style"
+        android:background="@drawable/style_edittext"
 
-        android:drawableStart="@drawable/ic_user"
+        android:drawableStart="@drawable/vector_user"
         android:drawablePadding="12dp"
         android:ems="10"
 
@@ -93,8 +93,8 @@
         android:layout_height="40dp"
         android:layout_marginTop="12dp"
 
-        android:background="@drawable/edittext_style"
-        android:drawableStart="@drawable/ic_user"
+        android:background="@drawable/style_edittext"
+        android:drawableStart="@drawable/vector_user"
         android:drawablePadding="12dp"
 
         android:ems="10"
