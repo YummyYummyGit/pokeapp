@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.pokeapp.R
 import com.example.pokeapp.ui.fragment.CalculatorFragment
+import com.example.pokeapp.ui.fragment.PokemonFragment
 import com.example.pokeapp.ui.fragment.UserFragment
 import com.example.pokeapp.ui.pokedex.PokedexFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -29,13 +30,18 @@ class ContentActivity : AppCompatActivity() {
         val pokedexFragment = PokedexFragment()
         val userFragment = UserFragment()
         val calculatorFragment = CalculatorFragment()
+        val pokemonFragment = PokemonFragment()
 
         bottomNavigationView = findViewById(R.id.bottomBar)
 
         bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when(menuItem.itemId) {
+//                R.id.optionUser -> {
+//                    replaceFragment(UserFragment())
+//                    true
+//                }
                 R.id.optionUser -> {
-                    replaceFragment(UserFragment())
+                    replaceFragment(PokemonFragment())
                     true
                 }
 
